@@ -124,9 +124,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BackEnd\TestClass.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1634,8 +1636,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\Kendo UI for jQuery R3 2020\apptemplates\dashboard\content\countries-sales.geo.json" />
     <Content Include="Scripts\Kendo UI for jQuery R3 2020\apptemplates\dashboard\content\country-customers.json" />
@@ -2830,10 +2830,14 @@
     <Content Include="Scripts\Kendo UI for jQuery R3 2020\styles\kendo.uniform.min.css.map" />
     <Content Include="Scripts\Kendo UI for jQuery R3 2020\styles\kendo.uniform.mobile.min.css.map" />
     <Content Include="Scripts\Kendo UI for jQuery R3 2020\VSExtensions\VS2019\TelerikUI.Mvc.VSPackage.vsix" />
+    <Content Include="Views\Movie\NineteenSeventeen.cshtml" />
+    <Content Include="Views\Movie\LordOfTheRings.cshtml" />
+    <Content Include="Views\Movie\Soul.cshtml" />
+    <Content Include="Views\Movie\Tenet.cshtml" />
+    <Content Include="Views\Movie\Joker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
