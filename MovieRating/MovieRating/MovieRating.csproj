@@ -2835,6 +2835,7 @@
     <Content Include="Views\Movie\Soul.cshtml" />
     <Content Include="Views\Movie\Tenet.cshtml" />
     <Content Include="Views\Movie\Joker.cshtml" />
+    <Content Include="Views\Movie\MyJokerView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
