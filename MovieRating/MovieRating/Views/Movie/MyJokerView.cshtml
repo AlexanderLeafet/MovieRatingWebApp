@@ -151,6 +151,9 @@
     <script>
         $(document).ready(function () {
 
+         
+            
+
             var validator = $("#exampleform").kendoValidator().data("kendoValidator");
             var validationSummary = $("#validation-summary");
 
@@ -162,6 +165,13 @@
                 event.preventDefault();
                 if (validator.validate()) {
                     validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
+
+                    var ratingData = JSON.stringify({
+                        userRating: $("#rating").val(),
+                        userFullName: $("#fullname").val()
+                    });
+                    localStorage.setItem("UserData", ratingData);
+
                 } else {
                     validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
                 }
