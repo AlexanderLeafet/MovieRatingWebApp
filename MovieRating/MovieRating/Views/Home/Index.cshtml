@@ -9,15 +9,31 @@
 
         <script>
             $(document).ready(function () {
-                let data = [{ id: 1, Place: 1, Movie: "Joker (2019)", "URL": "https://localhost:44360/Movie/MyJokerView", rating: 5, TotalVotes: 37 },
-                    { id: 2, Place: 2, Movie: "Lord of the Rings (2001)", "URL": "https://localhost:44360/Movie/LordOfTheRings", rating: 4, TotalVotes: 55 },
-                    { id: 3, Place: 3, Movie: "1917 (2019)", "URL": "https://localhost:44360/Movie/NineteenSeventeen", rating: 3.5, TotalVotes: 23 },
-                    { id: 4, Place: 4, Movie: "Soul (2020)", "URL": "https://localhost:44360/Movie/Soul", rating: 3, TotalVotes: 17 },
-                    { id: 5, Place: 5, Movie: "Tenet (2020)", "URL": "https://localhost:44360/Movie/Tenet", rating: 1.5, TotalVotes: 83 }
+                
+                var mydataSource = new kendo.data.DataSource({
+                    transport: {
+                        read: {
+                            url: '@Url.Action("GetMovieList", "Home")',
+                            dataType: "json"
+                        }
+                    },
+                    schema: {
+                        model: {
+                            id: "ID",
+                            fields: {
+                                ID: { type: "number" },
+                                Place: { type: "number" },
+                                Movie: { type: "string" },
+                                rating: { type: "number" },
+                                TotalVotes: { type: "string"},
+                            }
+                        }
+                    }
+                });
 
-                ];
+
                 $("#grid").kendoGrid({
-                    dataSource: data,
+                    dataSource: mydataSource,
                     columns: [{
                         field: "Place",
                         title: " ",
@@ -58,7 +74,6 @@
                     max: 5,
                     selection: "continuous",
                     precision: "half",
-                    editable: false,
                     value: dataItem.rating
                 });
                 var ratingInstance = rating.data("kendoRating");
