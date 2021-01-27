@@ -143,6 +143,7 @@
     <Content Include="Content\Images\sagan_om_ringen.jpg" />
     <Content Include="Content\Images\Soul.jpeg" />
     <Content Include="Content\Images\Tenet.jpg" />
+    <Content Include="Content\MediaQueries.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
