@@ -122,13 +122,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BackEnd\TestClass.cs" />
+    <Compile Include="BackEnd\Movie.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\TestModel.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieInfo.cs" />
+    <Compile Include="Models\MovieRating.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -142,12 +144,14 @@
     <Content Include="Content\Images\Soul.jpeg" />
     <Content Include="Content\Images\Tenet.jpg" />
     <Content Include="Content\MoviePage.css" />
+    <Content Include="Content\MediaQueries.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\JsonData.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2836,6 +2840,7 @@
     <Content Include="Views\Movie\Soul.cshtml" />
     <Content Include="Views\Movie\Tenet.cshtml" />
     <Content Include="Views\Movie\Joker.cshtml" />
+    <Content Include="Views\Movie\MyJokerView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,204 @@
+﻿
+
+@{
+    ViewBag.Title = "Joker";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Joker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: black;
+        }
+
+        nav {
+            float: left;
+            width: 50%;
+            padding: 20px;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 50%;
+        }
+
+        .container_pleb {
+            justify-content: space-around;
+            display: flex;
+            margin-left: 0px;
+        }
+
+            .container_pleb p {
+                display: flex;
+                align-items: center;
+                margin: 30px;
+            }
+
+        .reivew_title {
+            margin-top: 70px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        #map {
+            left: 370px;
+            height: 280px;
+            width: 450px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Joker (2019)</h1>
+        <h6>2h 2min | Crime, Drama, Thriller </h6>
+    </header>
+
+
+
+    <div class="container_pleb">
+        <div class="container_pleb p">
+            <p>
+                Director: Todd Phillips <br /> <br />
+                Writers: Todd Phillips, Scott Silver <br /> <br />
+                Stars: Joaquin Phoenix, Robert De Niro, Zazie Beetz
+            </p>
+        </div>
+        <img src="~/Content/Images/joker.jpg" />
+
+        <p>
+            Arthur Fleck works as a clown and is an<br />
+            aspiring stand-up comic. He has mental <br />
+            health issues, part of which involves <br />
+            uncontrollable laughter. <br /><br />
+            Times are tough and, due to his issues and occupation, <br />
+            Arthur has an even worse time than most. <br />
+            Over time these issues bear down on him,<br />
+            shaping his actions, making him ultimately <br />
+            take on the persona he is more known as...<br />
+            JOKER!
+        </p>
+    </div>
+
+    <div class="reivew_title">
+        <h4>
+            Share your thoughts, <br /> <br />
+            Leave a Rating!
+        </h4>
+    </div>
+
+    <div id="form_example">
+        <div class="form-group">
+            <div id="validation-summary">
+            </div>
+
+            <form id="exampleform" class="k-form k-form-vertical">
+                <ul class="k-form-group">
+
+                    <li class="k-form-field">
+                        <label for="rating" class="k-form-label">Rating</label>
+                        <span class="k-form-field-wrap">
+                            <input id="rating" name="rating" required validationMessage="Select a rating" />
+                            <span class="k-invalid-msg" data-for="rating"></span>
+                        </span>
+                    </li>
+
+                    <li class="k-form-field">
+                        <label for="fullname" class="k-form-label">Your Name</label>
+                        <span class="k-form-field-wrap">
+                            <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                        </span>
+                    </li>
+
+                    <li class="k-form-buttons">
+                        <button class="k-button k-primary" type="submit">Submit</button>
+                    </li>
+
+                </ul>
+
+            </form>
+        </div>
+    </div>
+
+
+    <div id="map"></div>
+
+    <script>
+        $(document).ready(function () {
+
+
+
+
+            var validator = $("#exampleform").kendoValidator().data("kendoValidator");
+            var validationSummary = $("#validation-summary");
+
+            $("#rating").kendoRating({
+                precision: "half"
+            });
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+                if (validator.validate()) {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
+
+                    var ratingData = JSON.stringify({
+                        userRating: $("#rating").val(),
+                        userFullName: $("#fullname").val()
+                    });
+                    localStorage.setItem("UserData", ratingData);
+
+                } else {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        function createMap() {
+            $("#map").kendoMap({
+                center: [34.098065, -118.325783],
+                zoom: 7,
+                layers: [{
+                    type: "tile",
+                    urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+                    subdomains: ["a", "b", "c"],
+                    attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap contributors</a>"
+                }],
+                markers: [{
+                    location: [34.098065, -118.325783],
+                    tooltip: {
+                        content: "Hollywood"
+                    }
+                }]
+            });
+
+            $("#map").unbind("mousewheel");
+        }
+
+        $(document).ready(createMap);
+    </script>
+
+</body>
+</html>

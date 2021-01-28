@@ -33,5 +33,9 @@ namespace MovieRating.Controllers
         {
             return View();
         }
+        public ActionResult MyJokerView()
+        {
+            return View();
+        }
     }
 }
