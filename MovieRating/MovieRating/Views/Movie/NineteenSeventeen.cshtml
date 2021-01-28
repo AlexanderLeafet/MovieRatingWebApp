@@ -7,65 +7,39 @@
 <head>
     <meta charset="utf-8" />
     <title>1917</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        header {
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: black;
-        }
-
-        nav {
-            float: left;
-            width: 50%;
-            padding: 20px;
-        }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-        article {
-            float: right;
-            padding: 20px;
-            width: 50%;
-        }
-    </style>
+    <link href="~/Content/MoviePage.css" rel="stylesheet"/>
 </head>
+
 <body>
-    <header>
+    <div class="header">
         <h1>1917 (2019)</h1>
         <h6>1h 59min | Drama, Thriller, War </h6>
-    </header>
-    <br />
-    <br />
-    <image>
-        <img src="~/Content/Images/1917.jpg" style="width:250px; height:300px;" />
-    </image>
-    <section>
-        <nav>
-            <p> Director: Sam Mendes</p>
-            <p> Writers: Sam Mendes, Krysty Wilson-Cairns</p>
-            <p> Stars: Dean-Charles Chapman, George MacKay, Daniel Mays</p>
-        </nav>
-        <article>
-            <h2>Storyline</h2>
-            <p>
-                April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
-                If the message is not received in time the regiment will walk into a trap and be massacred.
-                To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
-            </p>
-        </article>
-    </section>
+    </div>
+    
+    <div class="row">
+        <div class="column side">
+            <img src="~/Content/Images/1917.jpg" style="width:250px; height:300px;" />
+            <div class="about">
+                <h3>About</h3>
+                <p class="director"> Sam Mendes</p>
+                <p class="writers"> Sam Mendes, Krysty Wilson-Cairns</p>
+                <p class="stars"> Dean-Charles Chapman, George MacKay, Daniel Mays </p
+            </div>
+        </div>
+    </div>
+    
+    <div class="column middle">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gZjQROMAh_s" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <h3 class="storyline">Storyline</h3>
+        <p>
+            April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
+            If the message is not received in time the regiment will walk into a trap and be massacred.
+            To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
+        </p>
+    </div>
 </body>
 </html>
 

@@ -8,62 +8,37 @@
 <head>
     <meta charset="utf-8" />
     <title>Soul</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        header {
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: black;
-        }
-
-        nav {
-            float: left;
-            width: 50%;
-            padding: 20px;
-        }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-        article {
-            float: right;
-            padding: 20px;
-            width: 50%;
-        }
-    </style>
+    <link href="~/Content/MoviePage.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
+    <div class="header">
         <h1>Soul (2020)</h1>
         <h6>1h 40min | Animation, Adventure, Comedy </h6>
-    </header>
-    <br />
-    <br />
-    <image>
-        <img src="~/Content/Images/Soul.jpeg" style="width:250px; height:300px;" />
-    </image>
-    <section>
-        <nav>
-            <p> Director: Pete Docter, Kemp Powers (co-director)</p>
-            <p> Writers: Pete Docter (story & screenplay by), Mike Jones (story & screenplay by) </p>
-            <p> Stars: Jamie Foxx, Tina Fey, Graham Norton</p>
-        </nav>
-        <article>
-            <h2>Storyline</h2>
+    </div>
+    
+    <div class="row">
+        <div class="column side">
+            <img src="~/Content/Images/Soul.jpeg" alt="Soul" style="width:50%" />
+            <div class="about">
+                <h3>About</h3>
+                <p class="directors"> Pete Docter, Kemp Powers (co-director)</p>
+                <p class="writers"> Pete Docter (story & screenplay by), Mike Jones (story & screenplay by) </p>
+                <p class="stars"> Jamie Foxx, Tina Fey, Graham Norton</p>
+            </div>
+        </div>
+
+        <div class="column middle">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xOsLIiBStEs"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <h3 class="storyline">Storyline</h3>
             <p>
                 Joe is a middle-school band teacher whose life hasn't quite gone the way he expected. His true passion is jazz -- and he's good.
                 But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.
             </p>
-        </article>
-    </section>
+        </div>
+    </div>
 </body>
+</html>

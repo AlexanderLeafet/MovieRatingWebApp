@@ -8,66 +8,43 @@
 <head>
     <meta charset="utf-8" />
     <title>Tenet</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        header {
-            padding: 30px;
-            text-align: center;
-            font-size: 35px;
-            color: black;
-        }
-
-        nav {
-            float: left;
-            width: 50%;
-            padding: 20px;
-        }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-        article {
-            float: right;
-            padding: 20px;
-            width: 50%;
-        }
-    </style>
+    <link href="~/Content/MoviePage.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
+    <div class="header">
         <h1>Tenet (2020)</h1>
         <h6>2h 30min | Action, Sci-Fi, Thriller </h6>
-    </header>
-    <br />
-    <br />
-    <image>
-        <img src="~/Content/Images/Tenet.jpg" style="width:250px; height:300px;" />
-    </image>
-    <section>
-        <nav>
-            <p> Director: Christopher Nolan</p>
-            <p> Writers: Christopher Nolan</p>
-            <p> Stars: John David Washington, Robert Pattinson, Elizabeth Debicki </p>
-        </nav>
-        <article>
-            <h2>Storyline</h2>
+    </div>
+
+    <div class="row">
+        <div class="column side">
+            <img src="~/Content/Images/Tenet.jpg" alt="Tenet" style="width:50%" />
+            <div class=" about">
+                <h3>About</h3>
+                <p class="directors">Christopher Nolan</p>
+                <p class="writers"> Christopher Nolan</p>
+                <p class="stars"> John David Washington, Robert Pattinson, Elizabeth Debicki </p>
+            </div>
+        </div>
+
+        <div class="column middle">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L3pk_TBkihU"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <h3 class="storyline">Storyline</h3>
             <p>
                 In a twilight world of international espionage, an unnamed CIA operative, known as The Protagonist, is recruited by a mysterious organization
                 called Tenet to participate in a global assignment that unfolds beyond real time. The mission: prevent Andrei Sator, a renegade Russian oligarch
                 with precognition abilities, from starting World War III. The Protagonist will soon master the art of "time inversion" as a way of countering
                 the threat that is to come.
             </p>
-        </article>
-    </section>
+        </div>
+    </div>
+    
+        
+  
 </body>
 </html>
 
