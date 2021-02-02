@@ -2,7 +2,7 @@
 	"id": 1,
 	"Place": 1,
 	"Movie": "Joker (2019)",
-	"URL": "https://localhost:44360/Movie/MyJokerView",
+	"URL": "https://localhost:44360/Movie/Joker",
 	"rating": 5,
 	"TotalVotes": 37
 },

@@ -15,7 +15,7 @@
         <h1>1917 (2019)</h1>
         <h6>1h 59min | Drama, Thriller, War </h6>
     </div>
-    
+
     <div class="row">
         <div class="column side">
             <img src="~/Content/Images/1917.jpg" style="width:250px; height:300px;" />
@@ -23,23 +23,128 @@
                 <h3>About</h3>
                 <p class="director"> Sam Mendes</p>
                 <p class="writers"> Sam Mendes, Krysty Wilson-Cairns</p>
-                <p class="stars"> Dean-Charles Chapman, George MacKay, Daniel Mays </p
+                <p class="stars"> Dean-Charles Chapman, George MacKay, Daniel Mays </p>
+            </div>
+        </div>
+
+        <div class="column middle">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gZjQROMAh_s"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <h3 class="storyline">Storyline</h3>
+            <p>
+                April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
+                If the message is not received in time the regiment will walk into a trap and be massacred.
+                To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
+            </p>
+        </div>
+    </div>
+
+    <div class="reivew_title">
+        <h4>
+            Share your thoughts, <br /> <br />
+            Leave a Rating!
+        </h4>
+    </div>
+
+    <div class="row">
+        <div class="column side">
+            <div id="form_example">
+                <div class="form-group">
+                    <div id="validation-summary">
+                    </div>
+
+                    <form id="exampleform" class="k-form k-form-vertical">
+                        <ul class="k-form-group">
+
+                            <li class="k-form-field">
+                                <label for="rating" class="k-form-label">Rating</label>
+                                <span class="k-form-field-wrap">
+                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                    <span class="k-invalid-msg" data-for="rating"></span>
+                                </span>
+                            </li>
+
+                            <li class="k-form-field">
+                                <label for="fullname" class="k-form-label">Your Name</label>
+                                <span class="k-form-field-wrap">
+                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                </span>
+                            </li>
+
+                            <li class="k-form-buttons">
+                                <button class="k-button k-primary" type="submit">Submit</button>
+                            </li>
+
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="column middle">
+                <div id="map"></div>
             </div>
         </div>
     </div>
-    
-    <div class="column middle">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gZjQROMAh_s" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-        </iframe>
-        <h3 class="storyline">Storyline</h3>
-        <p>
-            April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
-            If the message is not received in time the regiment will walk into a trap and be massacred.
-            To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
-        </p>
+
+    <div class="footer">
     </div>
+
+    <script>
+        $(document).ready(function () {
+            var validator = $("#exampleform").kendoValidator().data("kendoValidator");
+            var validationSummary = $("#validation-summary");
+
+            $("#rating").kendoRating({
+                precision: "half"
+            });
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+                if (validator.validate()) {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
+
+                    var ratingData = JSON.stringify({
+                        userRating: $("#rating").val(),
+                        userFullName: $("#fullname").val()
+                    });
+                    localStorage.setItem("UserData", ratingData);
+
+                } else {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        function createMap() {
+            $("#map").kendoMap({
+                center: [34.098065, -118.325783],
+                zoom: 7,
+                layers: [{
+                    type: "tile",
+                    urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+                    subdomains: ["a", "b", "c"],
+                    attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap contributors</a>"
+                }],
+                markers: [{
+                    location: [34.098065, -118.325783],
+                    tooltip: {
+                        content: "Hollywood"
+                    }
+                }]
+            });
+
+            $("#map").unbind("mousewheel");
+        }
+
+        $(document).ready(createMap);
+    </script>
 </body>
 </html>
 
