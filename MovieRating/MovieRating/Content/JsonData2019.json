@@ -1,0 +1,40 @@
+[{
+	"id": 1,
+	"Place": 1,
+	"Movie": "Movie1",
+	"URL": "https://localhost:44360/Movie/Joker",
+	"rating": 5,
+	"TotalVotes": 141
+},
+	{
+		"id": 2,
+		"Place": 2,
+		"Movie": "Movie2",
+		"URL": "https://localhost:44360/Movie/LordOfTheRings",
+		"rating": 4,
+		"TotalVotes": 62
+	},
+	{
+		"id": 3,
+		"Place": 3,
+		"Movie": "Movie3",
+		"URL": "https://localhost:44360/Movie/NineteenSeventeen",
+		"rating": 3.5,
+		"TotalVotes": 31
+	},
+	{
+		"id": 4,
+		"Place": 4,
+		"Movie": "Movie4",
+		"URL": "https://localhost:44360/Movie/Soul",
+		"rating": 3,
+		"TotalVotes": 29
+	},
+	{
+		"id": 5,
+		"Place": 5,
+		"Movie": "Movie1",
+		"URL": "https://localhost:44360/Movie/Tenet",
+		"rating": 2.5,
+		"TotalVotes": 19
+	}]

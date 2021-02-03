@@ -152,6 +152,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\JsonData.json" />
+    <Content Include="Content\JsonData2019.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2840,6 +2841,7 @@
     <Content Include="Views\Movie\Soul.cshtml" />
     <Content Include="Views\Movie\Tenet.cshtml" />
     <Content Include="Views\Movie\Joker.cshtml" />
+    <Content Include="Views\Home\HistoryIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

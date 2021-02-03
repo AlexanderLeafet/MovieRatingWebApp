@@ -17,11 +17,24 @@ namespace MovieRating.Controllers
             return View();
         }
 
+        public ActionResult HistoryIndex()
+        {
+            return View();
+        }
+
         public ActionResult GetMovieList()
         {
             var json = System.IO.File.ReadAllText(Server.MapPath(@"~/Content/JsonData.json"));
             List<MovieInfo> movieInfoList = JsonConvert.DeserializeObject<List<MovieInfo>>(json);
             
+            return Json(movieInfoList, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetMovieList2019()
+        {
+            var json = System.IO.File.ReadAllText(Server.MapPath(@"~/Content/JsonData2019.json"));
+            List<MovieInfo> movieInfoList = JsonConvert.DeserializeObject<List<MovieInfo>>(json);
+
             return Json(movieInfoList, JsonRequestBehavior.AllowGet);
         }
 
