@@ -3,5 +3,145 @@
     ViewBag.Title = "Interstellar";
 }
 
-<h2>Interstellar</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Interstellar</title>
+    <link href="~/Content/MediaQueries.css" rel="stylesheet" />
+    <link href="~/Content/MoviePage.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1>Interstellar (2014)</h1>
+            <h6>2h 49min | Adventure, Drama, Sci-Fi</h6>
+        </div>
+
+        <div class="side-bar">
+            <img src="~/Content/Images/Interstellar.jpg" alt="Interstellar" style="width: 50%" />
+            <div class="about">
+                <h3>About</h3>
+                <p class="directors">Christopher Nolan</p>
+                <p class="writers">Jonathan Nolan, Christopher Nolan</p>
+                <p class="stars">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zSWdZVtXT7E" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <h3 class=" storyline">Storyline</h3>
+            <p>
+                A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+            </p>
+        </div>
+
+        <div class="left">
+            <div id="form_example">
+                <div class="form-group">
+                    <div id="validation-summary">
+                    </div>
+
+                    <form id="exampleform" class="k-form k-form-vertical">
+                        <ul class="k-form-group">
+
+                            <li class="k-form-field">
+                                <label for="rating" class="k-form-label">Rating</label>
+                                <span class="k-form-field-wrap">
+                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                    <span class="k-invalid-msg" data-for="rating"></span>
+                                </span>
+                            </li>
+
+                            <li class="k-form-field">
+                                <label for="fullname" class="k-form-label">Your Name</label>
+                                <span class="k-form-field-wrap">
+                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                </span>
+                            </li>
+
+                            <li class="k-form-buttons">
+                                <button class="k-button k-primary" type="submit">Submit</button>
+                            </li>
+
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div id="map"></div>
+        </div>
+
+        <div class="footer">
+            <p>This is a footer. I dont know what to put in here yet</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var validator = $("#exampleform").kendoValidator().data("kendoValidator");
+            var validationSummary = $("#validation-summary");
+
+            $("#rating").kendoRating({
+                precision: "half"
+            });
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+                if (validator.validate()) {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
+
+                    var ratingData = JSON.stringify({
+                        userRating: $("#rating").val(),
+                        userFullName: $("#fullname").val()
+                    });
+                    localStorage.setItem("UserData", ratingData);
+
+                } else {
+                    validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        function createMap() {
+            $("#map").kendoMap({
+                center: [34.098065, -118.325783],
+                zoom: 7,
+                layers: [{
+                    type: "tile",
+                    urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+                    subdomains: ["a", "b", "c"],
+                    attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap contributors</a>"
+                }],
+                markers: [{
+                    location: [34.098065, -118.325783],
+                    tooltip: {
+                        content: "Hollywood"
+                    }
+                }]
+            });
+
+            $("#map").unbind("mousewheel");
+        }
+
+        $(document).ready(createMap);
+    </script>
+</body>
+</html>
+
+
+
+
 

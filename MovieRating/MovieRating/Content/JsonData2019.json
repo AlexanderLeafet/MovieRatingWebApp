@@ -1,40 +1,42 @@
-[{
-	"id": 1,
-	"Place": 1,
-	"Movie": "Movie1",
-	"URL": "https://localhost:44360/Movie/Joker",
-	"rating": 5,
-	"TotalVotes": 141
-},
+[
 	{
-		"id": 2,
+		"id": 6,
+		"Place": 1,
+		"Movie": "The Shawshank Redemption",
+		"URL": "https://localhost:44360/Movie/TheShawshankRedemption",
+		"rating": 5,
+		"TotalVotes": 141
+	},
+	{
+		"id": 7,
 		"Place": 2,
-		"Movie": "Movie2",
-		"URL": "https://localhost:44360/Movie/LordOfTheRings",
-		"rating": 4,
+		"Movie": "The Godfather",
+		"URL": "https://localhost:44360/Movie/TheGodfather",
+		"rating": 4.5,
 		"TotalVotes": 62
 	},
 	{
-		"id": 3,
+		"id": 8,
 		"Place": 3,
-		"Movie": "Movie3",
-		"URL": "https://localhost:44360/Movie/NineteenSeventeen",
-		"rating": 3.5,
-		"TotalVotes": 31
+		"Movie": "Interstellar",
+		"URL": "https://localhost:44360/Movie/Interstellar",
+		"rating": 4,
+		"TotalVotes": 70
 	},
 	{
-		"id": 4,
+		"id": 9,
 		"Place": 4,
-		"Movie": "Movie4",
-		"URL": "https://localhost:44360/Movie/Soul",
-		"rating": 3,
-		"TotalVotes": 29
+		"Movie": "Wall-E",
+		"URL": "https://localhost:44360/Movie/Wall_E",
+		"rating": 3.5,
+		"TotalVotes": 55
 	},
 	{
-		"id": 5,
+		"id": 10,
 		"Place": 5,
-		"Movie": "Movie1",
-		"URL": "https://localhost:44360/Movie/Tenet",
+		"Movie": "Modern Times",
+		"URL": "https://localhost:44360/Movie/ModernTimes",
 		"rating": 2.5,
-		"TotalVotes": 19
-	}]
+		"TotalVotes": 61
+	}
+]

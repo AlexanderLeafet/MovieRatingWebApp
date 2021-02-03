@@ -139,10 +139,15 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\1917.jpg" />
+    <Content Include="Content\Images\Interstellar.jpg" />
     <Content Include="Content\Images\joker.jpg" />
+    <Content Include="Content\Images\ModernTimes.jpg" />
     <Content Include="Content\Images\sagan_om_ringen.jpg" />
     <Content Include="Content\Images\Soul.jpeg" />
     <Content Include="Content\Images\Tenet.jpg" />
+    <Content Include="Content\Images\TheGodfather.jpg" />
+    <Content Include="Content\Images\TheShawshankRedemption.jpg" />
+    <Content Include="Content\Images\Wall-E.jpg" />
     <Content Include="Content\MoviePage.css" />
     <Content Include="Content\MediaQueries.css" />
     <Content Include="favicon.ico" />
