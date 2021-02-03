@@ -2840,6 +2840,11 @@
     <Content Include="Views\Movie\Soul.cshtml" />
     <Content Include="Views\Movie\Tenet.cshtml" />
     <Content Include="Views\Movie\Joker.cshtml" />
+    <Content Include="Views\Movie\TheShawshankRedemption.cshtml" />
+    <Content Include="Views\Movie\TheGodfather.cshtml" />
+    <Content Include="Views\Movie\Interstellar.cshtml" />
+    <Content Include="Views\Movie\Wall_E.cshtml" />
+    <Content Include="Views\Movie\ModernTimes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

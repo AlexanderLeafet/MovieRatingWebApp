@@ -33,9 +33,26 @@ namespace MovieRating.Controllers
         {
             return View();
         }
-        public ActionResult MyJokerView()
+        public ActionResult TheShawshankRedemption()
         {
             return View();
         }
+        public ActionResult TheGodfather()
+        {
+            return View();
+        }
+        public ActionResult Interstellar()
+        {
+            return View();
+        }
+        public ActionResult Wall_E()
+        {
+            return View();
+        }
+        public ActionResult ModernTimes()
+        {
+            return View();
+        }
+
     }
 }
