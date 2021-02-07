@@ -15,74 +15,71 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="header">
-            <h1>Modern Times (1936)</h1>
-            <h6>1h 27min | Comedy, Drama, Family</h6>
-        </div>
-
-        <div class="side-bar">
-            <img src="~/Content/Images/ModernTimes.jpg" alt="Wall_E" style="width: 50%" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="directors">Charles Chaplin</p>
-                <p class="writers">Charles Chaplin</p>
-                <p class="stars">Charles Chaplin, Paulette Goddard, Henry Bergman</p>
-            </div>
-        </div>
-
-        <div class="main">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GLeDdzGUTq0"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class=" storyline">Storyline</h3>
-            <p>
-                The Tramp struggles to live in modern industrial society with the help of a young homeless woman.
-            </p>
-        </div>
-
-        <div class="left">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+    <div class="movie-wrapper">
+        <div class="flex-container">
+            <header class="header">
+                <h1>Modern Times (1936)</h1>
+                <h6>1h 27min | Comedy, Drama, Family</h6>
+            </header>
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/ModernTimes.jpg" alt="ModernTimes" />
+                    <div class="about">
+                        <h4>About</h4>
+                        <ul>
+                            <li class="directors">Charles Chaplin</li>
+                            <li class="writers">Charles Chaplin</li>
+                            <li class="stars">Charles Chaplin, Paulette Goddard, Henry Bergman</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/GLeDdzGUTq0"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="storyline">Storyline</h3>
+                    <p class="text-story">
+                        Chaplin's last 'silent' film, filled with sound effects, was made when everyone else was making talkies. Charlie turns against modern society, the machine age, 
+                        (The use of sound in films ?) and progress. Firstly we see him frantically trying to keep up with a production line, tightening bolts. 
+                        He is selected for an experiment with an automatic feeding machine, but various mishaps leads his boss to believe he has gone mad, and Charlie is sent to a mental hospital - 
+                        When he gets out, he is mistaken for a communist while waving a red flag, sent to jail, foils a jailbreak, and is let out again. 
+                        We follow Charlie through many more escapades before the film is out
+                    </p>
                 </div>
             </div>
-        </div>
-
-        <div class="right">
-            <div id="map"></div>
-        </div>
-
-        <div class="footer">
-            <p>This is a footer. I dont know what to put in here yet</p>
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div class="footer">
+                <h4>This is a footer. I dont know what to put in here yet</h4>
+            </div>
         </div>
     </div>
 
