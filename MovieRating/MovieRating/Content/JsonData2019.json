@@ -1,0 +1,42 @@
+[
+	{
+		"id": 6,
+		"Place": 1,
+		"Movie": "The Shawshank Redemption",
+		"URL": "https://localhost:44360/Movie/TheShawshankRedemption",
+		"rating": 5,
+		"TotalVotes": 141
+	},
+	{
+		"id": 7,
+		"Place": 2,
+		"Movie": "The Godfather",
+		"URL": "https://localhost:44360/Movie/TheGodfather",
+		"rating": 4.5,
+		"TotalVotes": 62
+	},
+	{
+		"id": 8,
+		"Place": 3,
+		"Movie": "Interstellar",
+		"URL": "https://localhost:44360/Movie/Interstellar",
+		"rating": 4,
+		"TotalVotes": 70
+	},
+	{
+		"id": 9,
+		"Place": 4,
+		"Movie": "Wall-E",
+		"URL": "https://localhost:44360/Movie/Wall_E",
+		"rating": 3.5,
+		"TotalVotes": 55
+	},
+	{
+		"id": 10,
+		"Place": 5,
+		"Movie": "Modern Times",
+		"URL": "https://localhost:44360/Movie/ModernTimes",
+		"rating": 2.5,
+		"TotalVotes": 61
+	}
+]

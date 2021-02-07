@@ -139,10 +139,15 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\1917.jpg" />
+    <Content Include="Content\Images\Interstellar.jpg" />
     <Content Include="Content\Images\joker.jpg" />
+    <Content Include="Content\Images\ModernTimes.jpg" />
     <Content Include="Content\Images\sagan_om_ringen.jpg" />
     <Content Include="Content\Images\Soul.jpeg" />
     <Content Include="Content\Images\Tenet.jpg" />
+    <Content Include="Content\Images\TheGodfather.jpg" />
+    <Content Include="Content\Images\TheShawshankRedemption.jpg" />
+    <Content Include="Content\Images\Wall-E.jpg" />
     <Content Include="Content\MoviePage.css" />
     <Content Include="Content\MediaQueries.css" />
     <Content Include="favicon.ico" />
@@ -152,6 +157,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\JsonData.json" />
+    <Content Include="Content\JsonData2019.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2840,6 +2846,12 @@
     <Content Include="Views\Movie\Soul.cshtml" />
     <Content Include="Views\Movie\Tenet.cshtml" />
     <Content Include="Views\Movie\Joker.cshtml" />
+    <Content Include="Views\Movie\TheShawshankRedemption.cshtml" />
+    <Content Include="Views\Movie\TheGodfather.cshtml" />
+    <Content Include="Views\Movie\Interstellar.cshtml" />
+    <Content Include="Views\Movie\Wall_E.cshtml" />
+    <Content Include="Views\Movie\ModernTimes.cshtml" />
+    <Content Include="Views\Home\HistoryIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

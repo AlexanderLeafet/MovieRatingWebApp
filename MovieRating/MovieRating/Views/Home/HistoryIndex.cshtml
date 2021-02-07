@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/MediaQueries.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Top 5 Movies 2019</h1>
+    <div id="example">
+        <div id="grid"></div>
+
+        <script>
+            $(document).ready(function () {
+
+                var mydataSource = new kendo.data.DataSource({
+                    transport: {
+                        read: {
+                            url: '@Url.Action("GetMovieList2019", "Home")',
+                            dataType: "json"
+                        }
+                    },
+                    schema: {
+                        model: {
+                            id: "ID",
+                            fields: {
+                                ID: { type: "number" },
+                                Place: { type: "number" },
+                                Movie: { type: "string" },
+                                rating: { type: "number" },
+                                TotalVotes: { type: "string"},
+                            }
+                        }
+                    }
+                });
+
+
+                $("#grid").kendoGrid({
+                    dataSource: mydataSource,
+                    columns: [{
+                        field: "Place",
+                        title: " ",
+                        width: "30px",
+                    },
+
+                    {
+                        field: "Movie",
+                        title: "Movie Title",
+                        template: '<a href="#=URL#">#=Movie#</a>'
+                    },
+                    {
+                        field: "Rating",
+                        template: function (item) {
+                            return '<input id="' + item.id + '" class="ratingInGrid"/>'
+                        },
+
+                        },
+                        {
+                            field: "TotalVotes",
+                            title: "Votes",
+                            width: "80px"
+                        }
+                    ],
+                    dataBound: function (e) {
+                        var items = e.sender.items();
+                        items.each((item, element) => createRating(item, element))
+                    }
+                });
+            });
+
+            function createRating(item, element) {
+                var grid = $("#grid").getKendoGrid();
+                var dataItem = grid.dataItem(element);
+                var rating = $(element).find('.ratingInGrid');
+                rating.kendoRating({
+                    min: 1,
+                    max: 5,
+                    selection: "continuous",
+                    precision: "half",
+                    value: dataItem.rating
+                });
+                var ratingInstance = rating.data("kendoRating");
+                ratingInstance.readonly(true);
+            }
+        </script>
+
+    </div>
+
+    <style>
+        #grid .k-master-row {
+            height: 100px;
+        }
+    </style>
+
+</body>
+</html>
