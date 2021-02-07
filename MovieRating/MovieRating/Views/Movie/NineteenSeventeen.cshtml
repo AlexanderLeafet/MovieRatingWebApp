@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "NineteenSeventeen";
 }
 <!DOCTYPE html>
@@ -7,120 +6,96 @@
 <head>
     <meta charset="utf-8" />
     <title>1917</title>
-    <link href="~/Content/MoviePage.css" rel="stylesheet"/>
+    <link href="~/Content/MoviePage.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="header">
-        <h1>1917 (2019)</h1>
-        <h6>1h 59min | Drama, Thriller, War </h6>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <img src="~/Content/Images/1917.jpg" style="width:250px; height:300px;" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="director"> Sam Mendes</p>
-                <p class="writers"> Sam Mendes, Krysty Wilson-Cairns</p>
-                <p class="stars"> Dean-Charles Chapman, George MacKay, Daniel Mays </p>
-            </div>
-        </div>
-
-        <div class="column middle">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gZjQROMAh_s"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class="storyline">Storyline</h3>
-            <p>
-                April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
-                If the message is not received in time the regiment will walk into a trap and be massacred.
-                To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
-            </p>
-        </div>
-    </div>
-
-    <div class="reivew_title">
-        <h4>
-            Share your thoughts, <br /> <br />
-            Leave a Rating!
-        </h4>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+    <div class="movie-wrapper">
+        <div class="flex-container">
+            <header class="header">
+                <h1>1917 (2019)</h1>
+                <h6>1h 59min | Drama, Thriller, War </h6>
+            </header>
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/1917.jpg" alt="1917" />
+                    <div class="about">
+                        <ul>
+                            About
+                            <li class="directors">Sam Mendes</li>
+                            <li class="writers">Sam Mendes, Krysty Wilson-Cairns</li>
+                            <li class="stars">Dean-Charles Chapman, George MacKay, Daniel Mays</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/gZjQROMAh_s"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="storyline">Storyline</h3>
+                    <p class="text-story">
+                        April 1917, the Western Front. Two British soldiers are sent to deliver an urgent message to an isolated regiment.
+                        If the message is not received in time the regiment will walk into a trap and be massacred.
+                        To get to the regiment they will need to cross through enemy territory. Time is of the essence and the journey will be fraught with danger
+                    </p>
                 </div>
             </div>
-
-
-            <div class="column middle">
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
                 <div id="map"></div>
+            </div>
+            <div class="footer">
+                <p>This is a footer. I dont know what to put in here yet</p>
             </div>
         </div>
     </div>
-
-    <div class="footer">
-    </div>
-
     <script>
         $(document).ready(function () {
             var validator = $("#exampleform").kendoValidator().data("kendoValidator");
             var validationSummary = $("#validation-summary");
-
             $("#rating").kendoRating({
                 precision: "half"
             });
-
             $("form").submit(function (event) {
                 event.preventDefault();
                 if (validator.validate()) {
                     validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
-
                     var ratingData = JSON.stringify({
                         userRating: $("#rating").val(),
                         userFullName: $("#fullname").val()
                     });
                     localStorage.setItem("UserData", ratingData);
-
                 } else {
                     validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
                 }
             });
         });
-
     </script>
-
     <script>
         function createMap() {
             $("#map").kendoMap({
@@ -139,12 +114,9 @@
                     }
                 }]
             });
-
             $("#map").unbind("mousewheel");
         }
-
         $(document).ready(createMap);
     </script>
 </body>
 </html>
-

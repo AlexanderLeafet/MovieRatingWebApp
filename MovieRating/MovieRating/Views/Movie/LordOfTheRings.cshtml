@@ -1,128 +1,103 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "LordOfTheRings";
 }
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>LordOfTheRings</title>
-    <link href="~/Content/MoviePage.css" rel="stylesheet"/>
+    <link href="~/Content/MoviePage.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="header">
-        <h1>The Lord of the Rings(2001)</h1>
-        <h6>2h 58min | Action, Aventure, Drama </h6>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <img src="~/Content/Images/sagan_om_ringen.jpg" alt="Sagan om ringen" style="width: 50%" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="directors"> Peter Jackson</p>
-                <p class="writers"> J.R.R. Tolkien (novel), Fran Walsh (screenplay)</p>
-                <p class="stars"> Elijah Wood, Ian McKellen, Orlando Bloom</p>
+    <div class="movie-wrapper">
+        <div class="flex-container">
+            <div class="header">
+                <h1>The Lord of the Rings(2001)</h1>
+                <h6>2h 58min | Action, Aventure, Drama </h6>
             </div>
-        </div>
-
-        <div class="column middle">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KIYMjuEWT_8"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class=" storyline">Storyline</h3>
-            <p>
-                An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo.
-                When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom
-                in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir,
-                and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger
-                at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.
-            </p>
-        </div>
-    </div>
-    <div class="reivew_title">
-        <h4>
-            Share your thoughts, <br /> <br />
-            Leave a Rating!
-        </h4>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/sagan_om_ringen.jpg" alt="Sagan om ringen" />
+                    <div class="about">
+                        <ul>
+                            About
+                            <li class="directors"> Peter Jackson</li>
+                            <li class="writers"> J.R.R. Tolkien (novel), Fran Walsh (screenplay)</li>
+                            <li class="stars"> Elijah Wood, Ian McKellen, Orlando Bloom</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/KIYMjuEWT_8"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class=" storyline">Storyline</h3>
+                    <p class="text-story">
+                        An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo.
+                        When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom
+                        in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir,
+                        and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger
+                        at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.
+                    </p>
                 </div>
             </div>
-
-
-            <div class="column middle">
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
                 <div id="map"></div>
+            </div>
+            <div class="footer">
+                <p>Thi is a footer. I dont know what to put in here</p>
             </div>
         </div>
     </div>
-
-    <div class="footer">
-    </div>
-
     <script>
         $(document).ready(function () {
             var validator = $("#exampleform").kendoValidator().data("kendoValidator");
             var validationSummary = $("#validation-summary");
-
             $("#rating").kendoRating({
                 precision: "half"
             });
-
             $("form").submit(function (event) {
                 event.preventDefault();
                 if (validator.validate()) {
                     validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
-
                     var ratingData = JSON.stringify({
                         userRating: $("#rating").val(),
                         userFullName: $("#fullname").val()
                     });
                     localStorage.setItem("UserData", ratingData);
-
                 } else {
                     validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
                 }
             });
         });
-
     </script>
-
     <script>
         function createMap() {
             $("#map").kendoMap({
@@ -141,12 +116,9 @@
                     }
                 }]
             });
-
             $("#map").unbind("mousewheel");
         }
-
         $(document).ready(createMap);
     </script>
 </body>
 </html>
-
