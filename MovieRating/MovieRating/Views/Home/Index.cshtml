@@ -61,9 +61,21 @@
                     ],
                     dataBound: function (e) {
                         var items = e.sender.items();
-                        items.each((item, element) => createRating(item, element))
+                        items.each((item, element) => createRating(item, element));
+
+
+                        function sizeRating() {
+                            var windowsize = $(window).width();
+                            if (windowsize < 600) {
+                                $("#grid").find(".k-rating-container").hide();
+                            }
+                        }
+                        $(window).resize(sizeRating());
                     }
+
                 });
+                
+                //Document Ready
             });
 
             function createRating(item, element) {
