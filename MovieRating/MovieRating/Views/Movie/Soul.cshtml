@@ -1,8 +1,6 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Soul";
 }
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,116 +8,93 @@
     <title>Soul</title>
     <link href="~/Content/MoviePage.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="header">
-        <h1>Soul (2020)</h1>
-        <h6>1h 40min | Animation, Adventure, Comedy </h6>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <img src="~/Content/Images/Soul.jpeg" alt="Soul" style="width:50%" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="directors"> Pete Docter, Kemp Powers (co-director)</p>
-                <p class="writers"> Pete Docter (story & screenplay by), Mike Jones (story & screenplay by) </p>
-                <p class="stars"> Jamie Foxx, Tina Fey, Graham Norton</p>
-            </div>
-        </div>
-
-        <div class="column middle">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xOsLIiBStEs"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class="storyline">Storyline</h3>
-            <p>
-                Joe is a middle-school band teacher whose life hasn't quite gone the way he expected. His true passion is jazz -- and he's good.
-                But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.
-            </p>
-        </div>
-    </div>
-
-    <div class="reivew_title">
-        <h4>
-            Share your thoughts, <br /> <br />
-            Leave a Rating!
-        </h4>
-    </div>
-
-    <div class="row">
-        <div class="column side">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+    <div class="movie-wrapper">
+        <div class="flex-container">
+            <header class="header">
+                <h1>Soul (2020)</h1>
+                <h6>1h 40min | Animation, Adventure, Comedy </h6>
+            </header>
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/Soul.jpeg" alt="Soul" />
+                    <div class="about">
+                        <ul>
+                            About
+                            <li class="directors">Pete Docter, Kemp Powers (co-director)</li>
+                            <li class="writers">Pete Docter (story & screenplay by), Mike Jones (story & screenplay by)</li>
+                            <li class="stars">Jamie Foxx, Tina Fey, Graham Norton</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/xOsLIiBStEs"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="storyline">Storyline</h3>
+                    <p class="text-story">
+                        Joe is a middle-school band teacher whose life hasn't quite gone the way he expected. His true passion is jazz -- and he's good.
+                        But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.
+                    </p>
                 </div>
             </div>
-
-            <div class="column middle">
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
                 <div id="map"></div>
+            </div>
+            <div class="footer">
+                <p>This is a footer. I dont know what to put in here yet</p>
             </div>
         </div>
     </div>
-    
-    <div class="footer">
-    </div>
-    
     <script>
         $(document).ready(function () {
             var validator = $("#exampleform").kendoValidator().data("kendoValidator");
             var validationSummary = $("#validation-summary");
-
             $("#rating").kendoRating({
                 precision: "half"
             });
-
             $("form").submit(function (event) {
                 event.preventDefault();
                 if (validator.validate()) {
                     validationSummary.html("<div class='k-messagebox k-messagebox-success'>Thank you for your rating!</div>");
-
                     var ratingData = JSON.stringify({
                         userRating: $("#rating").val(),
                         userFullName: $("#fullname").val()
                     });
                     localStorage.setItem("UserData", ratingData);
-
                 } else {
                     validationSummary.html("<div class='k-messagebox k-messagebox-error'>Oops! There is invalid data in the form.</div>");
                 }
             });
         });
-
     </script>
-
     <script>
         function createMap() {
             $("#map").kendoMap({
@@ -138,10 +113,8 @@
                     }
                 }]
             });
-
             $("#map").unbind("mousewheel");
         }
-
         $(document).ready(createMap);
     </script>
 </body>

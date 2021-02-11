@@ -15,74 +15,71 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="header">
-            <h1>The Godfather (1972)</h1>
-            <h6>2h 55min | Crime, Drama</h6>
-        </div>
-
-        <div class="side-bar">
-            <img src="~/Content/Images/TheGodfather.jpg" alt="TheGodfather" style="width: 50%" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="directors">Francis Ford Coppola</p>
-                <p class="writers">Mario Puzo, Francis Ford Coppola</p>
-                <p class="stars">Marlon Brando, Al Pacino, James Caan</p>
-            </div>
-        </div>
-
-        <div class="main">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sY1S34973zA" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class=" storyline">Storyline</h3>
-            <p>
-                An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.
-            </p>
-        </div>
-
-        <div class="left">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+    <div class="movie-wrapper">
+        <div class="flex-container">
+            <header class="header">
+                <h1>The Godfather (1972)</h1>
+                <h6>2h 55min | Crime, Drama</h6>
+            </header>
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/TheGodfather.jpg" alt="TheGodfather" />
+                    <div class="about">
+                        <h4>About</h4>
+                        <ul>
+                            <li class="directors">Francis Ford Coppola</li>
+                            <li class="writers">Mario Puzo, Francis Ford Coppola</li>
+                            <li class="stars">Marlon Brando, Al Pacino, James Caan</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/sY1S34973zA"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="storyline">Storyline</h3>
+                    <p class="text-story">
+                        The Godfather "Don" Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, 
+                        Vito's youngest son and a decorated WW II Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. 
+                        Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs 
+                        the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways 
+                        which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart.
+                    </p>
                 </div>
             </div>
-        </div>
-
-        <div class="right">
-            <div id="map"></div>
-        </div>
-
-        <div class="footer">
-            <p>This is a footer. I dont know what to put in here yet</p>
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div class="footer">
+                <h4>This is a footer. I dont know what to put in here yet</h4>
+            </div>
         </div>
     </div>
 

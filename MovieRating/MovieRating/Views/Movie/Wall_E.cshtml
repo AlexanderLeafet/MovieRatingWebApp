@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <meta charset="utf-8" />
     <title>Wall-E</title>
     <link href="~/Content/MediaQueries.css" rel="stylesheet" />
@@ -15,74 +14,72 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="header">
-            <h1>Wall-E (2008)</h1>
-            <h6>1h 38min | Animation, Adventure, Family</h6>
-        </div>
-
-        <div class="side-bar">
-            <img src="~/Content/Images/Wall-E.jpg" alt="Wall_E" style="width: 50%" />
-            <div class="about">
-                <h3>About</h3>
-                <p class="directors">Andrew Stanton</p>
-                <p class="writers">Andrew Stanton, Pete Docter</p>
-                <p class="stars">Ben Burtt, Elissa Knight, Jeff Garlin</p>
-            </div>
-        </div>
-
-        <div class="main">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8-_9n5DtKOc"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-            <h3 class=" storyline">Storyline</h3>
-            <p>
-                In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
-            </p>
-        </div>
-
-        <div class="left">
-            <div id="form_example">
-                <div class="form-group">
-                    <div id="validation-summary">
-                    </div>
-
-                    <form id="exampleform" class="k-form k-form-vertical">
-                        <ul class="k-form-group">
-
-                            <li class="k-form-field">
-                                <label for="rating" class="k-form-label">Rating</label>
-                                <span class="k-form-field-wrap">
-                                    <input id="rating" name="rating" required validationMessage="Select a rating" />
-                                    <span class="k-invalid-msg" data-for="rating"></span>
-                                </span>
-                            </li>
-
-                            <li class="k-form-field">
-                                <label for="fullname" class="k-form-label">Your Name</label>
-                                <span class="k-form-field-wrap">
-                                    <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
-                                </span>
-                            </li>
-
-                            <li class="k-form-buttons">
-                                <button class="k-button k-primary" type="submit">Submit</button>
-                            </li>
-
+        <div class="movie-wrapper">
+        <div class="flex-container">
+            <header class="header">
+                <h1>Wall-E (2008)</h1>
+                <h6>1h 38min | Animation, Adventure, Family</h6>
+            </header>
+            <div class="trailer-flex">
+                <div class="side-bar">
+                    <img src="~/Content/Images/Wall-E.jpg" alt="Wall_E" />
+                    <div class="about">
+                        <h4>About</h4>
+                        <ul>
+                            <li class="directors">Andrew Stanton</li>
+                            <li class="writers">Andrew Stanton, Pete Docter</li>
+                            <li class="stars">Ben Burtt, Elissa Knight, Jeff Garlin</li>
                         </ul>
-
-                    </form>
+                    </div>
+                </div>
+                <div class="iframe-div">
+                    <iframe src="https://www.youtube.com/embed/8-_9n5DtKOc"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <h3 class="storyline">Storyline</h3>
+                    <p class="text-story">
+                        In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation,
+                        WALL-E, a garbage collecting robot has been left to clean up the mess. Mesmerized with trinkets of Earth's history and show tunes, WALL-E is alone on Earth except for a sprightly pet cockroach. 
+                        One day, EVE, a sleek (and dangerous) reconnaissance robot, is sent to Earth to find proof that life is once again sustainable. 
+                        WALL-E falls in love with EVE. WALL-E rescues EVE from a dust storm and shows her a living plant he found amongst the rubble. Consistent with her "directive", 
+                        EVE takes the plant and automatically enters a deactivated state except for a blinking green beacon. WALL-E, doesn't understand what has happened to his new friend, 
+                        but, true to his love, he protects her from wind, rain, and lightning, even as she is unresponsive. One day a massive ship comes to reclaim EVE, but WALL-E,
+                    </p>
                 </div>
             </div>
-        </div>
-
-        <div class="right">
-            <div id="map"></div>
-        </div>
-
-        <div class="footer">
-            <p>This is a footer. I dont know what to put in here yet</p>
+            <div class="rating-flex">
+                <div id="form_example">
+                    <div class="form-group">
+                        <div id="validation-summary">
+                        </div>
+                        <form id="exampleform" class="k-form k-form-vertical">
+                            <ul class="k-form-group">
+                                <li class="k-form-field">
+                                    <label for="rating" class="k-form-label">Rating</label>
+                                    <span class="k-form-field-wrap">
+                                        <input id="rating" name="rating" required validationMessage="Select a rating" />
+                                        <span class="k-invalid-msg" data-for="rating"></span>
+                                    </span>
+                                </li>
+                                <li class="k-form-field">
+                                    <label for="fullname" class="k-form-label">Your Name</label>
+                                    <span class="k-form-field-wrap">
+                                        <input type="text" id="fullname" name="fullname" class="k-textbox" placeholder="Enter your name" required validationMessage="Enter your name" />
+                                    </span>
+                                </li>
+                                <li class="k-form-buttons">
+                                    <button class="k-button k-primary" type="submit">Submit</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div class="footer">
+                <h4>This is a footer. I dont know what to put in here yet</h4>
+            </div>
         </div>
     </div>
 
