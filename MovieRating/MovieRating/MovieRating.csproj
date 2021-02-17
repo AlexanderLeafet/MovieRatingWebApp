@@ -148,8 +148,8 @@
     <Content Include="Content\Images\TheGodfather.jpg" />
     <Content Include="Content\Images\TheShawshankRedemption.jpg" />
     <Content Include="Content\Images\Wall-E.jpg" />
+    <Content Include="Content\IndexPage.css" />
     <Content Include="Content\MoviePage.css" />
-    <Content Include="Content\MediaQueries.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -1,0 +1,161 @@
+﻿/* CSS HEX COLOR SCHEME 
+--middle-grey: #8a8979ff;
+--artichoke: #8d9083ff;
+--nickel: #70766bff;
+--black-olive: #444b44ff;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #444b44ff;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.index-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px black;
+    border: 0.1px solid black;
+    margin-top: 0.5rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.list-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0px 30px;
+}
+
+.welcome-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0px;
+    margin-top: 1rem;
+}
+
+.welcome-text {
+    width: 80%;
+    padding-left: 20px;
+}
+
+    .welcome-text > h3 {
+        margin-bottom: 0px;
+        font-weight: bold;
+    }
+
+    .welcome-text > p {
+        margin-top: 1px;
+    }
+
+.footer {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #444b44ff;
+    color: white;
+}
+
+#grid .k-master-row {
+    height: 100px;
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .flex-wrapper {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .header, .footer {
+        background-color: #70766bff;
+    }
+
+    .welcome-flex, .list-flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        .welcome-flex div {
+            align-items: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-flex div {
+            align-items: flex-start;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+}
+
+/* For mobile phones */
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .body-content {
+        padding: 0;
+    }
+
+    .flex-wrapper {
+        width: 100%;
+        box-shadow: none;
+        border: 0;
+        margin-top: 0;
+    }
+
+    .header, .footer {
+        background-color: #8d9083ff;
+    }
+
+    .welcome-flex, .list-flex {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5px;
+    }
+
+        .welcome-flex div {
+            align-items: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-flex div {
+            align-items: flex-start;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+}

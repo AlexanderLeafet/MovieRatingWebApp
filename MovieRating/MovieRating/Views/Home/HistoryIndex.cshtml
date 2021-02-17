@@ -1,14 +1,37 @@
-﻿<!DOCTYPE html>
+﻿@{ ViewBag.Title = "HistoryIndex"; }
+
+<!DOCTYPE html>
 <html>
 <head>
-    <link href="~/Content/MediaQueries.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HistoryIndex</title>
+    <link href="~/Content/IndexPage.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Top 5 Movies 2019</h1>
-    <div id="example">
-        <div id="grid"></div>
 
-        <script>
+<body>
+    <div class="index-wrapper">
+        <div class="flex-container">
+            <div class="header">
+                <h1>Top 5 Movies 2019</h1>
+            </div>
+            <div class="welcome-flex">
+                <div class="welcome-text">
+                    <h3>Movies of our choice</h3>
+                    <p>This is last years movies.</p>
+                </div>
+            </div>
+            <div class="list-flex">
+                <div id="example">
+                    <div id="grid"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Movie Rating.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
             $(document).ready(function () {
 
                 var mydataSource = new kendo.data.DataSource({
@@ -80,15 +103,6 @@
                 var ratingInstance = rating.data("kendoRating");
                 ratingInstance.readonly(true);
             }
-        </script>
-
-    </div>
-
-    <style>
-        #grid .k-master-row {
-            height: 100px;
-        }
-    </style>
-
+    </script>
 </body>
 </html>
